@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from 'vue';
+import { ref, reactive } from 'vue';
 import { Inertia } from '@inertiajs/inertia';
 import { Head, Link } from '@inertiajs/inertia-vue3';
 import ApplicationMark from '@/Components/ApplicationMark.vue';
@@ -14,7 +14,10 @@ defineProps({
 });
 
 const showingNavigationDropdown = ref(false);
-
+const navs = reactive([
+    {title: 'Dashboard', route: 'dashboard'},
+    {title: 'Developers', route: 'developers'}
+])
 const switchToTeam = (team) => {
     Inertia.put(route('current-team.update'), {
         team_id: team.id,
@@ -49,8 +52,8 @@ const logout = () => {
 
                             <!-- Navigation Links -->
                             <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                                <NavLink :href="route('dashboard')" :active="route().current('dashboard')">
-                                    Dashboard
+                                <NavLink v-for="(e, i) in navs" :key="i" :href="route(e.route)" :active="route().current(e.route)">
+                                    {{ e.title }}
                                 </NavLink>
                             </div>
                         </div>
