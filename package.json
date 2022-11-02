@@ -24,5 +24,8 @@
     "dependencies": {
         "naive-ui": "^2.33.5",
         "unplugin-vue-components": "^0.22.9"
+    },
+    "engines": {
+        "node": "16.x"
     }
 }
