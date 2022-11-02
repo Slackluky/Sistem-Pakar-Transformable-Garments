@@ -6,8 +6,8 @@ import Luky from '@assets/images/luky.jpg'
 import Mr from '@assets/images/mr.jpg'
 
 const developers = reactive([
-    {name: 'Luky Setiawan', img: Luky},
-    {name: 'Yumarlin', img: Mr}
+    {name: 'Luky Setiawan', img: Luky, nim: '19330071'},
+    {name: 'Yumarlin MZ S.kom M.pd M.kom', img: Mr}
 ])
 </script>
 
@@ -26,8 +26,9 @@ const developers = reactive([
                         <template #cover>
                             <img :src="e.img" class="h-[300px] w-[300px] object-cover rounded-lg">
                         </template>
-                        <div class="flex justify-center p-3">
-                            <span class="font-medium text-lg">{{ e.name }}</span>
+                        <div class="justify-center p-3 grid grid-cols-1">
+                            <span class="font-medium text-lg mx-auto">{{ e.name }}</span>
+                            <span class="font-medium text-lg mx-auto">{{ e.nim }}</span>
                         </div>
                     </n-card>
                 </div>
