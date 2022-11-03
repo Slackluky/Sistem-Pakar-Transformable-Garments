@@ -9,13 +9,14 @@
         <!-- Fonts -->
         <link rel="stylesheet" href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap">
 
+    </head>
+    <body class="font-sans antialiased">
+        @inertia
+
         <!-- Scripts -->
         @routes
         @inertiaHead
         {{-- @vite(['resources/js/app.js', "resources/js/Pages/{$page['component']}.vue"]) --}}
         @vite(['resources/js/app.js'])
-    </head>
-    <body class="font-sans antialiased">
-        @inertia
     </body>
 </html>
