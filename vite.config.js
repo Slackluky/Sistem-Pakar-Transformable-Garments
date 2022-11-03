@@ -4,10 +4,13 @@ import vue from '@vitejs/plugin-vue';
 import Components from 'unplugin-vue-components/vite'
 import { NaiveUiResolver } from 'unplugin-vue-components/resolvers'
 
+const ASSET_URL = process.env.ASSET || '';
+const host = 'localhost'
 export default defineConfig({
+    base: ASSET_URL,
     plugins: [
         laravel({
-            input: 'resources/js/app.js',
+            input: ['resources/js/app.js'],
             refresh: true,
         }),
         vue({
@@ -26,5 +29,9 @@ export default defineConfig({
         alias: {
             '@assets': '/resources/assets',
         },
+    },
+    server: {
+        host,
+        hmr: { host }
     },
 });

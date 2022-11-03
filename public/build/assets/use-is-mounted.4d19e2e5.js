@@ -1,1 +1,0 @@
-import{i as o,r as n,k as s,m as r,G as f}from"./app.d2dc92b0.js";function c(e){const t=o(e),u=n(t.value);return s(t,a=>{u.value=a}),typeof e=="function"?u:{__v_isRef:!0,get value(){return u.value},set value(a){e.set(a)}}}function i(){const e=n(!1);return r(()=>{e.value=!0}),f(e)}export{i,c as u};
