@@ -4,8 +4,7 @@ import vue from '@vitejs/plugin-vue';
 import Components from 'unplugin-vue-components/vite'
 import { NaiveUiResolver } from 'unplugin-vue-components/resolvers'
 
-const ASSET_URL = process.env.ASSET || '';
-const host = 'localhost'
+const ASSET_URL = process.env.ASSET_URL || '';
 export default defineConfig({
     base: ASSET_URL,
     plugins: [
@@ -16,7 +15,7 @@ export default defineConfig({
         vue({
             template: {
                 transformAssetUrls: {
-                    base: null,
+                    base: ASSET_URL,
                     includeAbsolute: false,
                 },
             },
@@ -31,7 +30,7 @@ export default defineConfig({
         },
     },
     server: {
-        host,
-        hmr: { host }
+        ASSET_URL,
+        hmr: { ASSET_URL }
     },
 });
