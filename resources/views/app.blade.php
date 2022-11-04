@@ -8,7 +8,6 @@
 
         <!-- Fonts -->
         <link rel="stylesheet" href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap">
-        @routes
         {{-- <script defer>
             Ziggy.url = '{{ env('APP_URL') }}'
         </script> --}}
@@ -16,8 +15,9 @@
     </head>
     <body class="font-sans antialiased">
         @inertia
-        @vite(["resources/js/Pages/{$page['component']}.vue"])
-        {{-- @vite(['resources/js/app.js']) --}}
+        @routes
+        {{-- @vite(["resources/js/Pages/{$page['component']}.vue"]) --}}
+        @vite('resources/js/app.js')
         <!-- Scripts -->
         {{-- @routes
         @inertiaHead --}}
