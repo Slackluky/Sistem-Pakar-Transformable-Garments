@@ -625,12 +625,12 @@
       "assets/garment-landing.ac595a31.png"
     ]
   },
-  "resources/js/app.css": {
-    "file": "assets/app.f6a6f3c4.css",
-    "src": "resources/js/app.css"
-  },
   "resources/js/Pages/Welcome.css": {
     "file": "assets/Welcome.50a43afb.css",
     "src": "resources/js/Pages/Welcome.css"
+  },
+  "resources/js/app.css": {
+    "file": "assets/app.f6a6f3c4.css",
+    "src": "resources/js/app.css"
   }
 }
