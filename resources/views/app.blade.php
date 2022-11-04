@@ -9,6 +9,9 @@
         <!-- Fonts -->
         <link rel="stylesheet" href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap">
         @routes
+        <script defer>
+            Ziggy.url = '{{ env('APP_URL') }}'
+        </script>
         @inertiaHead
     </head>
     <body class="font-sans antialiased">
