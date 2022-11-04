@@ -5,8 +5,8 @@ import { createApp, h } from 'vue';
 import { createInertiaApp } from '@inertiajs/inertia-vue3';
 import { InertiaProgress } from '@inertiajs/progress';
 import { resolvePageComponent } from 'laravel-vite-plugin/inertia-helpers';
-import { ZiggyVue } from '../../vendor/tightenco/ziggy/dist/vue.m';
-
+import { ZiggyVue } from '/vendor/tightenco/ziggy/dist/vue.es.js';
+import { Ziggy } from './ziggy.js';
 const appName = window.document.getElementsByTagName('title')[0]?.innerText || 'Luky Setiawan';
 
 function createElement(tag, attributes = {}) {
@@ -26,8 +26,8 @@ createInertiaApp({
             createElement("meta", { name: "naive-ui-style" })
         );
         return createApp({ render: () => h(app, props) })
-            .use(plugin)
-            .use(ZiggyVue, Ziggy)
+            .use(plugin, ZiggyVue, Ziggy)
+            .mixin({ methods: { route: window.route } })
             .mount(el);
     },
 });
