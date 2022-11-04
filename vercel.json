@@ -17,7 +17,7 @@
         "LOG_DEPRECATIONS_CHANNEL":"null",
         "LOG_LEVEL":"debug",
         "ASSET_URL":"http://localhost",
-
+        "CI": "false",
         "DB_CONNECTION":"mysql",
         "DB_HOST":"sql12.freemysqlhosting.net",
         "DB_PORT":"3306",

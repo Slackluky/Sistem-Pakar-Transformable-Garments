@@ -17,3 +17,5 @@ yarn-error.log
 /.idea
 /.vscode
 public/build/manifest.json
+
+.vercel
