@@ -13,12 +13,12 @@
         </script> --}}
         <?php echo app('Tightenco\Ziggy\BladeRouteGenerator')->generate(); ?>
         @inertuaHead
+        @vite('resources/js/app.js')
     </head>
     <body class="font-sans antialiased">
         @inertua('app')
         {{-- @routes --}}
         {{-- @vite(["resources/js/Pages/{$page['component']}.vue"]) --}}
-        @vite('resources/js/app.js')
         <!-- Scripts -->
         {{-- @routes
         @inertiaHead --}}
