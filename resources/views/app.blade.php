@@ -15,7 +15,7 @@
         @inertiaHead
     </head>
     <body class="font-sans antialiased">
-        @inertia
+        @inertia('app')
         {{-- @routes --}}
         {{-- @vite(["resources/js/Pages/{$page['component']}.vue"]) --}}
         @vite('resources/js/app.js')
