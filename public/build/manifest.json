@@ -1,8 +1,4 @@
 {
-  "resources/assets/images/garment.png": {
-    "file": "assets/garment.727c78c5.png",
-    "src": "resources/assets/images/garment.png"
-  },
   "resources/assets/images/luky.jpg": {
     "file": "assets/luky.0d1cbf3c.jpg",
     "src": "resources/assets/images/luky.jpg"
@@ -10,6 +6,10 @@
   "resources/assets/images/mr.jpg": {
     "file": "assets/mr.6734ab19.jpg",
     "src": "resources/assets/images/mr.jpg"
+  },
+  "resources/assets/images/garment.png": {
+    "file": "assets/garment.727c78c5.png",
+    "src": "resources/assets/images/garment.png"
   },
   "resources/assets/images/logo.png": {
     "file": "assets/logo.b8946ab9.png",
