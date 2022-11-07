@@ -8,7 +8,7 @@
         "dest": "/api/index.php"
     }],
     "builds": [
-        { "src": "package.json", "use": "@vercel/static-build", "config": {"distDir": "public/build"} }
+        { "src": "package.json", "use": "@vercel/static-build", "config": {"distDir": "public/build/**"} }
     ],
     "env": {
         "APP_NAME":"Laravel",
