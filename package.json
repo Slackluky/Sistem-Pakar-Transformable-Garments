@@ -3,7 +3,7 @@
     "scripts": {
         "dev": "vite",
         "build": "vite build",
-        "vercel-build": "CI='' npm i vite && npm run build && mv public/build",
+        "vercel-build": "CI='' npm i vite && npm run build",
         "heroku-postbuild": "npm i vite && npm run build"
     },
     "devDependencies": {
