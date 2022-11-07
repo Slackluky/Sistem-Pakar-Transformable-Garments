@@ -11,12 +11,13 @@
         {{-- <script defer>
             Ziggy.url = '{{ env('APP_URL') }}'
         </script> --}}
-        <?php echo app('Tightenco\Ziggy\BladeRouteGenerator')->generate(); ?>
-        @inertiaHead
-        @vite('resources/js/app.js')
     </head>
     <body class="font-sans antialiased">
         @inertia('app')
+
+        <?php echo app('Tightenco\Ziggy\BladeRouteGenerator')->generate(); ?>
+        @inertiaHead
+        @vite('resources/js/app.js')
         {{-- @routes --}}
         {{-- @vite(["resources/js/Pages/{$page['component']}.vue"]) --}}
         <!-- Scripts -->
