@@ -17,27 +17,27 @@ class DatabaseSeeder extends Seeder
     {
         // \App\Models\User::factory(10)->create();
 
-        $user = \App\Models\User::factory()->create([
-            'name' => 'Admin',
-            'email' => 'admin@admin.admin',
-            'password' => \Illuminate\Support\Facades\Hash::make('superadmin'),
-            'current_team_id' => 1
-        ]);
+        // $user = \App\Models\User::factory()->create([
+        //     'name' => 'Admin',
+        //     'email' => 'admin@admin.admin',
+        //     'password' => \Illuminate\Support\Facades\Hash::make('superadmin'),
+        //     'current_team_id' => 1
+        // ]);
 
-        $team = \App\Models\Team::factory()->create([
-            'id' => $user->current_team_id,
-            'user_id' => $user->id
-        ]);
+        // $team = \App\Models\Team::factory()->create([
+        //     'id' => $user->current_team_id,
+        //     'user_id' => $user->id
+        // ]);
 
-        $user = \App\Models\User::factory()->create([
-            'name' => 'User',
-            'email' => 'user@admin.admin',
-            'password' => \Illuminate\Support\Facades\Hash::make('superadmin'),
-            'current_team_id' => 1
-        ]);
-        $drugs = \App\Models\Drugs::factory()->count(3)
-            ->state(new Sequence(['code' => 'D01', 'drug' => 'Marijuana'], ['code' => 'D02', 'drug' => 'Synthetic cannabinoids'], ['code' => 'D03', 'drug' => 'Ecstasy']))
-            ->create();
+        // $user = \App\Models\User::factory()->create([
+        //     'name' => 'User',
+        //     'email' => 'user@admin.admin',
+        //     'password' => \Illuminate\Support\Facades\Hash::make('superadmin'),
+        //     'current_team_id' => 1
+        // ]);
+        // $drugs = \App\Models\Drugs::factory()->count(3)
+        //     ->state(new Sequence(['code' => 'D01', 'drug' => 'Marijuana'], ['code' => 'D02', 'drug' => 'Synthetic cannabinoids'], ['code' => 'D03', 'drug' => 'Ecstasy']))
+        //     ->create();
 
         $symptoms = new Sequence(
             ['code' => 'S01', 'symptom' => 'Merasa senang dan "tinggi"'],
@@ -55,7 +55,7 @@ class DatabaseSeeder extends Seeder
 
         );
 
-        // \App\Models\Symptoms::factory()->count(12)->state($symptoms)->create();
+        \App\Models\Symptoms::factory()->count(12)->state($symptoms)->create();
 
         $rules = new Sequence(
             ['symptom_id' => 1, 'code' => 'R01', 'drug_id' => 1, 'probability' => 0.3],
