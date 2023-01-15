@@ -22,7 +22,7 @@ const selected = reactive([])
             </h2>
         </template>
 
-        <div class="py-12">
+        <div class="py-12 px-12">
             <div class="grid grid-cols-2">
                 <div class="flex flex-col mx-auto w-full">
                     <div v-for="(res, i) in props.final" :key="i" class="flex flex-col justify-center align-middle">
@@ -33,11 +33,11 @@ const selected = reactive([])
                 <div>
                     <div class="block text-center gap-8">
                         hasil diagnosa:
-                        <h3 class="text-xl mb-[40px]">{{ props.max.nama_penyakit }}</h3>
+                        <h3 class="text-xl mb-[40px] p-3">{{ props.max.nama_penyakit }}</h3>
                         saran:
-                        <h3 class="text-xl mb-[40px]">{{ props.max.saran }}</h3>
+                        <h3 class="text-xl mb-[40px] p-3">{{ props.max.saran }}</h3>
                         informasi:
-                        <h3 class="text-xl mb-[40px]">{{ props.max.informasi }}</h3>
+                        <h3 class="text-xl mb-[40px] p-3">{{ props.max.informasi }}</h3>
                     </div>
                 </div>
             </div>

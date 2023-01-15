@@ -56,12 +56,16 @@ const drugsColumn = [
     {
       title: "Information",
       key: "information",
-      align: 'center'
+      align: 'center',
+      className: 'text-ellipsis',
+      width: '20vw'
     },
     {
       title: "Advice",
       key: "advice",
-      align: 'center'
+      align: 'center',
+      className: 'text-ellipsis',
+      width: '20vw'
     },
 ]
 
