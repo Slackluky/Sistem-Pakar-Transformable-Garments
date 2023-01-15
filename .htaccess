@@ -1,0 +1,5 @@
+RewriteEngine on 
+RewriteCond %{HTTP_HOST} ^luky-dev.my.id$ [NC,OR]
+RewriteCond %{HTTP_HOST} ^luky-dev.my.id$
+RewriteCond %{REQUEST_URI} !public/
+RewriteRule (.*) /public/$1 [L]

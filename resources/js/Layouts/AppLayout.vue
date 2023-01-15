@@ -16,7 +16,9 @@ defineProps({
 const showingNavigationDropdown = ref(false);
 const navs = reactive([
     {title: 'Dashboard', route: 'dashboard'},
-    {title: 'Developers', route: 'developers'}
+    {title: 'Developers', route: 'developers'},
+    {title: 'Knowledges', route: 'knowledges'},
+    {title: 'Diagnose', route: 'diagnose.index'}
 ])
 const switchToTeam = (team) => {
     Inertia.put(route('current-team.update'), {

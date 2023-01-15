@@ -35,4 +35,13 @@ Route::middleware([
     Route::get('/developers', function () {
         return Inertia::render('Developers');
     })->name('developers');
+
+    Route::get('/knowledges', [App\Http\Controllers\KnowledgeController::class, 'index'])
+    ->name('knowledges');
+
+    Route::get('/diagnose', [App\Http\Controllers\DiagnoseController::class, 'index'])
+    ->name('diagnose.index');
+
+    Route::post('/diagnose', [App\Http\Controllers\DiagnoseController::class, 'run'])
+    ->name('diagnose.run');
 });

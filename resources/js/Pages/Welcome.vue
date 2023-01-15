@@ -18,7 +18,7 @@ defineProps({
             <div class="grid grid-cols-2">
                 <div></div>
                 <div class="flex flex-col items-end justify-center h-screen p-[20px]">
-                    <h1 class="text-4xl font-light font-mono text-end capitalize">Sistem Pakar Untuk memilih jenis kain berdasarkan jenis pakaian transformable</h1>
+                    <h1 class="text-4xl font-light font-mono text-end capitalize">SISTEM PAKAR DETEKSI PENGGUNA ZAT ADIKTIF DENGAN METODE NAIVE BAYES</h1>
                     <Link v-if="$page.props.user" :href="route('dashboard')" class="text-sm text-gray-700 dark:text-gray-500 underline m-2"><n-button type="info">Back To Dashboard</n-button></Link>
                     <div v-else class="grid grid-cols-2 m-2">
                         <div class="flex justify-center items-center">
