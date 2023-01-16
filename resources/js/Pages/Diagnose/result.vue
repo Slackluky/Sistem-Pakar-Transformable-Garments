@@ -2,7 +2,7 @@
 import AppLayout from '@/Layouts/AppLayout.vue';
 import Welcome from '@/Components/Welcome.vue';
 import { reactive } from 'vue';
-import { Inertia, Link } from '@inertiajs/inertia';
+import { Link } from '@inertiajs/inertia-vue3';
 import { NCard, NCheckbox, NButton } from 'naive-ui'
 
 const props = defineProps({
@@ -42,7 +42,7 @@ const selected = reactive([])
                 </div>
             </div>
             <div class="text-center">
-                <a class="mx-auto" type="button" :href="route('diagnose.index')"><n-button>Kembali</n-button></a>
+                <Link :href="route('diagnose.index')"><n-button type="info">Kembali</n-button></Link>
             </div>
         </div>
     </AppLayout>

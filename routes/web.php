@@ -44,4 +44,8 @@ Route::middleware([
 
     Route::post('/diagnose', [App\Http\Controllers\DiagnoseController::class, 'run'])
     ->name('diagnose.run');
+
+    Route::get('/guide', function () {
+        return Inertia::render('Guides');
+    })->name('guide');
 });

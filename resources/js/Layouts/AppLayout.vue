@@ -18,7 +18,8 @@ const navs = reactive([
     {title: 'Dashboard', route: 'dashboard'},
     {title: 'Developers', route: 'developers'},
     {title: 'Knowledges', route: 'knowledges'},
-    {title: 'Diagnose', route: 'diagnose.index'}
+    {title: 'Diagnose', route: 'diagnose.index'},
+    {title: 'Guide', route: 'guide'}
 ])
 const switchToTeam = (team) => {
     Inertia.put(route('current-team.update'), {

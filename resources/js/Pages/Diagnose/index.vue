@@ -45,7 +45,7 @@ const submit = () => {
                 </n-list>
                 <div class="flex justify-center mt-4">
                     <div>
-                        <n-button class="bg-green-600" @click="submit">
+                        <n-button class="bg-green-600" :disabled="selected.length === 0" @click="submit">
                             Submit
                         </n-button>
                         <n-button @click="selected.splice(0)">
